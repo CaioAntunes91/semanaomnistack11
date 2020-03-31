@@ -1,0 +1,55 @@
+/*
+* Rota > (recurso, function(request, response))
+*/
+
+/*
+* Métodos HTTP:
+*
+* GET: Buscar uma informação no backend
+* POST: Criar uma informação no backend
+* PUT: Alterar uma informação no backend
+* DELETE: Deletar uma informação no backend
+*/
+
+/*
+* Tipos de parâmteros:
+* 
+* Query params: Parâmetros nomeados enviados na rota/recurso após o simbolo de interrogação. Principal função: filtros, paginação (request.query)
+* Route params: Parâmetros utilizados para identificar recursos (request.params)
+* Request Body: Corpo da requisição/resposta utilizado para criar ou alterar recursos (request.body ou response.body)
+*/
+
+/*
+* SQL: MySQL, SQLite, PostgreSQL, Oracle, Microsoft SQL Server
+*NoSQL: MongoDB, CouchDB, etc
+*
+*Opção1: Queries através de um driver respectivo do banco de dados utilizado
+*/
+
+/* Entidades e Funcionalidades
+*
+* Entidades:
+* ONG
+* Caso
+*
+* Funcionalidades:
+* Login de ONG
+* Logout de ONG
+* Cadastro de ONG - OK
+* Listar ONG - OK
+* Cadastrar novos casos - OK
+* Deletar casos - OK
+* Listar casos específicos de uma ONG - OK
+* Listar todos os casos - OK
+* Entrar em contato com ONG (WhatsApp ou email)
+*/
+
+/* Migrations: controle de versões do banco de dados
+*
+* 
+*/
+
+/* Metodologia MVC
+*
+* Abordagem através de controllers
+*/
