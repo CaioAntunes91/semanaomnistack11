@@ -28,6 +28,7 @@ module.exports = {
         // console.log(request.body.title);
         const { title, description, value } = request.body;
         const ong_id = request.headers.authorization; // Cabeçalho da requisição (normalmente tem a ver com autenticação que é como vamos ter acesso ao id da ONG que está cadastrando o caso)
+        console.log(ong_id);
 
         const [id] = await connection('incidents').insert({
             title,
@@ -42,6 +43,7 @@ module.exports = {
     async delete(request, response) {
         const { id } = request.params;
         const ong_id = request.headers.authorization;
+        console.log(ong_id);
 
         const incident = await connection('incidents')
             .select(
