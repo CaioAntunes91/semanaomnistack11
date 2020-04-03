@@ -1,5 +1,6 @@
 const express = require("express");
 const cors = require("cors");
+const { errors } = require('celebrate');
 const routes = require("./routes");
 
 const app = express();
@@ -13,8 +14,7 @@ app.use(express.json());
 // O próximo comando indica utilizara variável com as rotas exportada do rotues.js
 app.use(routes);
 
+// O próximo comando é utilizado para dar clareza ao backend nos erros encontrados na validação. Caso contrário, todos seriam classificados como código 500 o qual é o pior caso de erro pois indica que aplicação não indentificou a causa, tornando mais difícil a tratativa.
+app.use(errors());
 
-
-
-
-app.listen(3333);
+module.exports = app;
